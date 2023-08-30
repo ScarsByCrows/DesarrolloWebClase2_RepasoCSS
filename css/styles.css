@@ -1,7 +1,3 @@
-html {
-    scroll-behavior: smooth;
-}
-
 body, html {
     padding: 0;
     margin: 0;
@@ -10,32 +6,34 @@ body, html {
 header {
     background-color: darkblue;    
     height: 60px;
-}
-
-section {
-    background-color: green;
-    display: flex;
-    /* flex-direction: column-reverse; */
+    grid-area: header;
 }
 
 nav {
-    width: 25%;
     background-color: coral;
+    grid-area: menu;
 }
 
-article {
-    width: 75%;
-    background-color: red;
-    height: 240px;
-}
 footer {
     background-color: gray;
     height: 80px;
+    grid-area: footer;
 }
 
+article {
+    height: 240px;
+    background-color: red;
+    grid-area: content;
+}
 #container {
     margin: 0 auto;
     width: 1200px;
     background-color: darkviolet;
+    display: grid;
+    grid-template-areas: 
+    'header header header header'
+    'menu content conten content'
+    'footer footer footer footer'
+    ;
 }
 
